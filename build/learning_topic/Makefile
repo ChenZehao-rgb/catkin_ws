@@ -68,16 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -88,6 +78,16 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+learning_topic/CMakeFiles/person_publisher.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/person_publisher.dir/rule
+.PHONY : learning_topic/CMakeFiles/person_publisher.dir/rule
+
+# Convenience name for target.
+person_publisher: learning_topic/CMakeFiles/person_publisher.dir/rule
+
+.PHONY : person_publisher
+
+# fast build rule for target.
+person_publisher/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/person_publisher.dir/build.make learning_topic/CMakeFiles/person_publisher.dir/build
+.PHONY : person_publisher/fast
+
+# Convenience name for target.
 learning_topic/CMakeFiles/velocity_publisher.dir/rule:
 	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/velocity_publisher.dir/rule
 .PHONY : learning_topic/CMakeFiles/velocity_publisher.dir/rule
@@ -181,6 +196,96 @@ velocity_publisher: learning_topic/CMakeFiles/velocity_publisher.dir/rule
 velocity_publisher/fast:
 	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/velocity_publisher.dir/build.make learning_topic/CMakeFiles/velocity_publisher.dir/build
 .PHONY : velocity_publisher/fast
+
+# Convenience name for target.
+learning_topic/CMakeFiles/learning_topic_generate_messages_py.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/learning_topic_generate_messages_py.dir/rule
+.PHONY : learning_topic/CMakeFiles/learning_topic_generate_messages_py.dir/rule
+
+# Convenience name for target.
+learning_topic_generate_messages_py: learning_topic/CMakeFiles/learning_topic_generate_messages_py.dir/rule
+
+.PHONY : learning_topic_generate_messages_py
+
+# fast build rule for target.
+learning_topic_generate_messages_py/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/learning_topic_generate_messages_py.dir/build.make learning_topic/CMakeFiles/learning_topic_generate_messages_py.dir/build
+.PHONY : learning_topic_generate_messages_py/fast
+
+# Convenience name for target.
+learning_topic/CMakeFiles/learning_topic_genlisp.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/learning_topic_genlisp.dir/rule
+.PHONY : learning_topic/CMakeFiles/learning_topic_genlisp.dir/rule
+
+# Convenience name for target.
+learning_topic_genlisp: learning_topic/CMakeFiles/learning_topic_genlisp.dir/rule
+
+.PHONY : learning_topic_genlisp
+
+# fast build rule for target.
+learning_topic_genlisp/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/learning_topic_genlisp.dir/build.make learning_topic/CMakeFiles/learning_topic_genlisp.dir/build
+.PHONY : learning_topic_genlisp/fast
+
+# Convenience name for target.
+learning_topic/CMakeFiles/learning_topic_generate_messages_lisp.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/learning_topic_generate_messages_lisp.dir/rule
+.PHONY : learning_topic/CMakeFiles/learning_topic_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+learning_topic_generate_messages_lisp: learning_topic/CMakeFiles/learning_topic_generate_messages_lisp.dir/rule
+
+.PHONY : learning_topic_generate_messages_lisp
+
+# fast build rule for target.
+learning_topic_generate_messages_lisp/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/learning_topic_generate_messages_lisp.dir/build.make learning_topic/CMakeFiles/learning_topic_generate_messages_lisp.dir/build
+.PHONY : learning_topic_generate_messages_lisp/fast
+
+# Convenience name for target.
+learning_topic/CMakeFiles/learning_topic_gencpp.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/learning_topic_gencpp.dir/rule
+.PHONY : learning_topic/CMakeFiles/learning_topic_gencpp.dir/rule
+
+# Convenience name for target.
+learning_topic_gencpp: learning_topic/CMakeFiles/learning_topic_gencpp.dir/rule
+
+.PHONY : learning_topic_gencpp
+
+# fast build rule for target.
+learning_topic_gencpp/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/learning_topic_gencpp.dir/build.make learning_topic/CMakeFiles/learning_topic_gencpp.dir/build
+.PHONY : learning_topic_gencpp/fast
+
+# Convenience name for target.
+learning_topic/CMakeFiles/learning_topic_generate_messages_cpp.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/learning_topic_generate_messages_cpp.dir/rule
+.PHONY : learning_topic/CMakeFiles/learning_topic_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+learning_topic_generate_messages_cpp: learning_topic/CMakeFiles/learning_topic_generate_messages_cpp.dir/rule
+
+.PHONY : learning_topic_generate_messages_cpp
+
+# fast build rule for target.
+learning_topic_generate_messages_cpp/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/learning_topic_generate_messages_cpp.dir/build.make learning_topic/CMakeFiles/learning_topic_generate_messages_cpp.dir/build
+.PHONY : learning_topic_generate_messages_cpp/fast
+
+# Convenience name for target.
+learning_topic/CMakeFiles/learning_topic_generate_messages.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/learning_topic_generate_messages.dir/rule
+.PHONY : learning_topic/CMakeFiles/learning_topic_generate_messages.dir/rule
+
+# Convenience name for target.
+learning_topic_generate_messages: learning_topic/CMakeFiles/learning_topic_generate_messages.dir/rule
+
+.PHONY : learning_topic_generate_messages
+
+# fast build rule for target.
+learning_topic_generate_messages/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/learning_topic_generate_messages.dir/build.make learning_topic/CMakeFiles/learning_topic_generate_messages.dir/build
+.PHONY : learning_topic_generate_messages/fast
 
 # Convenience name for target.
 learning_topic/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
@@ -271,6 +376,21 @@ rosgraph_msgs_generate_messages_py: learning_topic/CMakeFiles/rosgraph_msgs_gene
 rosgraph_msgs_generate_messages_py/fast:
 	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make learning_topic/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+learning_topic/CMakeFiles/learning_topic_gennodejs.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/learning_topic_gennodejs.dir/rule
+.PHONY : learning_topic/CMakeFiles/learning_topic_gennodejs.dir/rule
+
+# Convenience name for target.
+learning_topic_gennodejs: learning_topic/CMakeFiles/learning_topic_gennodejs.dir/rule
+
+.PHONY : learning_topic_gennodejs
+
+# fast build rule for target.
+learning_topic_gennodejs/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/learning_topic_gennodejs.dir/build.make learning_topic/CMakeFiles/learning_topic_gennodejs.dir/build
+.PHONY : learning_topic_gennodejs/fast
 
 # Convenience name for target.
 learning_topic/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
@@ -423,6 +543,36 @@ std_srvs_generate_messages_cpp/fast:
 .PHONY : std_srvs_generate_messages_cpp/fast
 
 # Convenience name for target.
+learning_topic/CMakeFiles/learning_topic_generate_messages_nodejs.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/learning_topic_generate_messages_nodejs.dir/rule
+.PHONY : learning_topic/CMakeFiles/learning_topic_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+learning_topic_generate_messages_nodejs: learning_topic/CMakeFiles/learning_topic_generate_messages_nodejs.dir/rule
+
+.PHONY : learning_topic_generate_messages_nodejs
+
+# fast build rule for target.
+learning_topic_generate_messages_nodejs/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/learning_topic_generate_messages_nodejs.dir/build.make learning_topic/CMakeFiles/learning_topic_generate_messages_nodejs.dir/build
+.PHONY : learning_topic_generate_messages_nodejs/fast
+
+# Convenience name for target.
+learning_topic/CMakeFiles/learning_topic_geneus.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/learning_topic_geneus.dir/rule
+.PHONY : learning_topic/CMakeFiles/learning_topic_geneus.dir/rule
+
+# Convenience name for target.
+learning_topic_geneus: learning_topic/CMakeFiles/learning_topic_geneus.dir/rule
+
+.PHONY : learning_topic_geneus
+
+# fast build rule for target.
+learning_topic_geneus/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/learning_topic_geneus.dir/build.make learning_topic/CMakeFiles/learning_topic_geneus.dir/build
+.PHONY : learning_topic_geneus/fast
+
+# Convenience name for target.
 learning_topic/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : learning_topic/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
@@ -483,6 +633,36 @@ turtlesim_generate_messages_cpp/fast:
 .PHONY : turtlesim_generate_messages_cpp/fast
 
 # Convenience name for target.
+learning_topic/CMakeFiles/pos_subscriber.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/pos_subscriber.dir/rule
+.PHONY : learning_topic/CMakeFiles/pos_subscriber.dir/rule
+
+# Convenience name for target.
+pos_subscriber: learning_topic/CMakeFiles/pos_subscriber.dir/rule
+
+.PHONY : pos_subscriber
+
+# fast build rule for target.
+pos_subscriber/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/pos_subscriber.dir/build.make learning_topic/CMakeFiles/pos_subscriber.dir/build
+.PHONY : pos_subscriber/fast
+
+# Convenience name for target.
+learning_topic/CMakeFiles/_learning_topic_generate_messages_check_deps_person.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/_learning_topic_generate_messages_check_deps_person.dir/rule
+.PHONY : learning_topic/CMakeFiles/_learning_topic_generate_messages_check_deps_person.dir/rule
+
+# Convenience name for target.
+_learning_topic_generate_messages_check_deps_person: learning_topic/CMakeFiles/_learning_topic_generate_messages_check_deps_person.dir/rule
+
+.PHONY : _learning_topic_generate_messages_check_deps_person
+
+# fast build rule for target.
+_learning_topic_generate_messages_check_deps_person/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/_learning_topic_generate_messages_check_deps_person.dir/build.make learning_topic/CMakeFiles/_learning_topic_generate_messages_check_deps_person.dir/build
+.PHONY : _learning_topic_generate_messages_check_deps_person/fast
+
+# Convenience name for target.
 learning_topic/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : learning_topic/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -511,6 +691,21 @@ rosgraph_msgs_generate_messages_eus: learning_topic/CMakeFiles/rosgraph_msgs_gen
 rosgraph_msgs_generate_messages_eus/fast:
 	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make learning_topic/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+learning_topic/CMakeFiles/learning_topic_genpy.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/learning_topic_genpy.dir/rule
+.PHONY : learning_topic/CMakeFiles/learning_topic_genpy.dir/rule
+
+# Convenience name for target.
+learning_topic_genpy: learning_topic/CMakeFiles/learning_topic_genpy.dir/rule
+
+.PHONY : learning_topic_genpy
+
+# fast build rule for target.
+learning_topic_genpy/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/learning_topic_genpy.dir/build.make learning_topic/CMakeFiles/learning_topic_genpy.dir/build
+.PHONY : learning_topic_genpy/fast
 
 # Convenience name for target.
 learning_topic/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
@@ -588,6 +783,21 @@ turtlesim_generate_messages_py/fast:
 .PHONY : turtlesim_generate_messages_py/fast
 
 # Convenience name for target.
+learning_topic/CMakeFiles/person_subscriber.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/person_subscriber.dir/rule
+.PHONY : learning_topic/CMakeFiles/person_subscriber.dir/rule
+
+# Convenience name for target.
+person_subscriber: learning_topic/CMakeFiles/person_subscriber.dir/rule
+
+.PHONY : person_subscriber
+
+# fast build rule for target.
+person_subscriber/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/person_subscriber.dir/build.make learning_topic/CMakeFiles/person_subscriber.dir/build
+.PHONY : person_subscriber/fast
+
+# Convenience name for target.
 learning_topic/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
 	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 .PHONY : learning_topic/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
@@ -618,6 +828,21 @@ std_srvs_generate_messages_eus/fast:
 .PHONY : std_srvs_generate_messages_eus/fast
 
 # Convenience name for target.
+learning_topic/CMakeFiles/learning_topic_generate_messages_eus.dir/rule:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/learning_topic_generate_messages_eus.dir/rule
+.PHONY : learning_topic/CMakeFiles/learning_topic_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+learning_topic_generate_messages_eus: learning_topic/CMakeFiles/learning_topic_generate_messages_eus.dir/rule
+
+.PHONY : learning_topic_generate_messages_eus
+
+# fast build rule for target.
+learning_topic_generate_messages_eus/fast:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/learning_topic_generate_messages_eus.dir/build.make learning_topic/CMakeFiles/learning_topic_generate_messages_eus.dir/build
+.PHONY : learning_topic_generate_messages_eus/fast
+
+# Convenience name for target.
 learning_topic/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
 	cd /home/chen/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 .PHONY : learning_topic/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
@@ -631,6 +856,87 @@ std_srvs_generate_messages_lisp: learning_topic/CMakeFiles/std_srvs_generate_mes
 std_srvs_generate_messages_lisp/fast:
 	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make learning_topic/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
 .PHONY : std_srvs_generate_messages_lisp/fast
+
+src/person_publisher.o: src/person_publisher.cpp.o
+
+.PHONY : src/person_publisher.o
+
+# target to build an object file
+src/person_publisher.cpp.o:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/person_publisher.dir/build.make learning_topic/CMakeFiles/person_publisher.dir/src/person_publisher.cpp.o
+.PHONY : src/person_publisher.cpp.o
+
+src/person_publisher.i: src/person_publisher.cpp.i
+
+.PHONY : src/person_publisher.i
+
+# target to preprocess a source file
+src/person_publisher.cpp.i:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/person_publisher.dir/build.make learning_topic/CMakeFiles/person_publisher.dir/src/person_publisher.cpp.i
+.PHONY : src/person_publisher.cpp.i
+
+src/person_publisher.s: src/person_publisher.cpp.s
+
+.PHONY : src/person_publisher.s
+
+# target to generate assembly for a file
+src/person_publisher.cpp.s:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/person_publisher.dir/build.make learning_topic/CMakeFiles/person_publisher.dir/src/person_publisher.cpp.s
+.PHONY : src/person_publisher.cpp.s
+
+src/person_subscriber.o: src/person_subscriber.cpp.o
+
+.PHONY : src/person_subscriber.o
+
+# target to build an object file
+src/person_subscriber.cpp.o:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/person_subscriber.dir/build.make learning_topic/CMakeFiles/person_subscriber.dir/src/person_subscriber.cpp.o
+.PHONY : src/person_subscriber.cpp.o
+
+src/person_subscriber.i: src/person_subscriber.cpp.i
+
+.PHONY : src/person_subscriber.i
+
+# target to preprocess a source file
+src/person_subscriber.cpp.i:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/person_subscriber.dir/build.make learning_topic/CMakeFiles/person_subscriber.dir/src/person_subscriber.cpp.i
+.PHONY : src/person_subscriber.cpp.i
+
+src/person_subscriber.s: src/person_subscriber.cpp.s
+
+.PHONY : src/person_subscriber.s
+
+# target to generate assembly for a file
+src/person_subscriber.cpp.s:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/person_subscriber.dir/build.make learning_topic/CMakeFiles/person_subscriber.dir/src/person_subscriber.cpp.s
+.PHONY : src/person_subscriber.cpp.s
+
+src/pos_subscriber.o: src/pos_subscriber.cpp.o
+
+.PHONY : src/pos_subscriber.o
+
+# target to build an object file
+src/pos_subscriber.cpp.o:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/pos_subscriber.dir/build.make learning_topic/CMakeFiles/pos_subscriber.dir/src/pos_subscriber.cpp.o
+.PHONY : src/pos_subscriber.cpp.o
+
+src/pos_subscriber.i: src/pos_subscriber.cpp.i
+
+.PHONY : src/pos_subscriber.i
+
+# target to preprocess a source file
+src/pos_subscriber.cpp.i:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/pos_subscriber.dir/build.make learning_topic/CMakeFiles/pos_subscriber.dir/src/pos_subscriber.cpp.i
+.PHONY : src/pos_subscriber.cpp.i
+
+src/pos_subscriber.s: src/pos_subscriber.cpp.s
+
+.PHONY : src/pos_subscriber.s
+
+# target to generate assembly for a file
+src/pos_subscriber.cpp.s:
+	cd /home/chen/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/pos_subscriber.dir/build.make learning_topic/CMakeFiles/pos_subscriber.dir/src/pos_subscriber.cpp.s
+.PHONY : src/pos_subscriber.cpp.s
 
 src/velocity_publisher.o: src/velocity_publisher.cpp.o
 
@@ -666,9 +972,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... edit_cache"
+	@echo "... person_publisher"
 	@echo "... velocity_publisher"
+	@echo "... edit_cache"
+	@echo "... learning_topic_generate_messages_py"
+	@echo "... learning_topic_genlisp"
+	@echo "... learning_topic_generate_messages_lisp"
+	@echo "... learning_topic_gencpp"
+	@echo "... learning_topic_generate_messages_cpp"
+	@echo "... list_install_components"
+	@echo "... learning_topic_generate_messages"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_eus"
@@ -676,6 +989,7 @@ help:
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... learning_topic_gennodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
@@ -687,22 +1001,38 @@ help:
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... learning_topic_generate_messages_nodejs"
+	@echo "... learning_topic_geneus"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... turtlesim_generate_messages_cpp"
+	@echo "... pos_subscriber"
+	@echo "... _learning_topic_generate_messages_check_deps_person"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... learning_topic_genpy"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... install"
 	@echo "... turtlesim_generate_messages_eus"
 	@echo "... turtlesim_generate_messages_lisp"
 	@echo "... turtlesim_generate_messages_py"
+	@echo "... person_subscriber"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_eus"
+	@echo "... learning_topic_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... src/person_publisher.o"
+	@echo "... src/person_publisher.i"
+	@echo "... src/person_publisher.s"
+	@echo "... src/person_subscriber.o"
+	@echo "... src/person_subscriber.i"
+	@echo "... src/person_subscriber.s"
+	@echo "... src/pos_subscriber.o"
+	@echo "... src/pos_subscriber.i"
+	@echo "... src/pos_subscriber.s"
 	@echo "... src/velocity_publisher.o"
 	@echo "... src/velocity_publisher.i"
 	@echo "... src/velocity_publisher.s"
