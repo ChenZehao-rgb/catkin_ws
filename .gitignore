@@ -1,0 +1,18 @@
+# 忽略构建目录
+build/
+
+# 忽略所有.o和.a文件
+*.o
+*.a
+
+# 忽略可执行文件
+*~
+*.exe
+*.out
+
+# 忽略特定于IDE的文件
+.vscode/
+*.code-workspace
+
+# 其他临时文件或目录
+.DS_Store
